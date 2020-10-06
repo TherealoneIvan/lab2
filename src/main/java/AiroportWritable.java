@@ -13,7 +13,7 @@ public class AiroportWritable implements Writable {
             cancelled_code;
     private Text fl_date , uniq_carrier , airlane_id , carrier , tail_num , wheels_on ,
             airr_time;
-    private DoubleWritable arr_delay , arr_delay_new , cancelled ,
+    private DoubleWritable arr_delay , arr_delay_new , cancelled , air_time , 
 
     @Override
     public void write(DataOutput out) throws IOException {
