@@ -7,7 +7,8 @@ import java.io.IOException;
 
 public class AirraceMapper extends Mapper<LongWritable, Text, LongWritable , Text> {
     @Override
-    public static String fileTag = "AP"
+    public static String fileTag = "AP~";
+    public static String 
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
 
     }
