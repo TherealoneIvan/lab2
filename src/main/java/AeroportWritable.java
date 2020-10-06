@@ -7,7 +7,7 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class AiroportWritable implements Writable {
+public class AeroportWritable implements Writable {
     private IntWritable year , quarter , month , day_of_month , day_of_week , fl_num,
             origin_airoport_id , orig_airpor_seq_id , origin_city_id, dest_airoprt_id,
             cancelled_code;
@@ -15,7 +15,7 @@ public class AiroportWritable implements Writable {
             airr_time;
     private DoubleWritable arr_delay , arr_delay_new , cancelled , air_time , distance;
 
-    public AiroportWritable(IntWritable year, IntWritable quarter, IntWritable month, IntWritable day_of_month, IntWritable day_of_week,
+    public AeroportWritable(IntWritable year, IntWritable quarter, IntWritable month, IntWritable day_of_month, IntWritable day_of_week,
                             IntWritable fl_num, IntWritable origin_airoport_id, IntWritable orig_airpor_seq_id, IntWritable origin_cyti_id,
                             IntWritable dest_airoprt_id, IntWritable cancelled_code, Text fl_date, Text uniq_carrier, Text airlane_id, Text carrier,
                             Text tail_num, Text wheels_on, Text airr_time, DoubleWritable arr_delay, DoubleWritable arr_delay_new, DoubleWritable cancelled,
