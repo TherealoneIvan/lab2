@@ -1,3 +1,5 @@
+import org.apache.hadoop.mapreduce.Job;
+
 public class MainAiroportApp {
     public static void main(String arg[]) throws Exception{
         if (arg.length < 2){
@@ -5,6 +7,6 @@ public class MainAiroportApp {
             System.exit(1);
         }
 //        gitwatch cheack???
-        
+        Job job = Job.getInstance();
     }
 }
