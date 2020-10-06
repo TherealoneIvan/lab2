@@ -13,7 +13,11 @@ public class AirraceWritable implements Writable {
         code = new IntWritable(0);
         airoport_name = new Text("");
     }
-    public AirraceWritable(IntWritable )
+    public AirraceWritable(IntWritable code , Text airoport_name){
+        this.code = code;
+        this.airoport_name = airoport_name;
+    }
+    
 
     @Override
     public void write(DataOutput out) throws IOException {
