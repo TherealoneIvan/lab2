@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class AiroportWritable implements Writable {
     private IntWritable year , quarter , month , day_of_month , day_of_week;
-    private Text fl_date , uniq_
+    private Text fl_date , uniq_carrier , 
     @Override
     public void write(DataOutput out) throws IOException {
 
