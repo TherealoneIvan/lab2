@@ -45,6 +45,7 @@ public class AiroportWritable implements Writable {
         this.distance = distance;
     }
 
+    
     @Override
     public void write(DataOutput out) throws IOException {
 
