@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class AiroportWritable implements Writable {
     private IntWritable year , quarter , month , day_of_month , day_of_week , fl_num,
-            origin_airoport_id , orig_airpor_seq_id , origin_cyti_id , dest_airoprt_id,
+            origin_airoport_id , orig_airpor_seq_id , origin_city_id, dest_airoprt_id,
             cancelled_code;
     private Text fl_date , uniq_carrier , airlane_id , carrier , tail_num , wheels_on ,
             airr_time;
@@ -28,7 +28,7 @@ public class AiroportWritable implements Writable {
         this.fl_num = fl_num;
         this.origin_airoport_id = origin_airoport_id;
         this.orig_airpor_seq_id = orig_airpor_seq_id;
-        this.origin_cyti_id = origin_cyti_id;
+        this.origin_city_id = origin_cyti_id;
         this.dest_airoprt_id = dest_airoprt_id;
         this.cancelled_code = cancelled_code;
         this.fl_date = fl_date;
@@ -109,12 +109,12 @@ public class AiroportWritable implements Writable {
         this.orig_airpor_seq_id = orig_airpor_seq_id;
     }
 
-    public IntWritable getOrigin_cyti_id() {
-        return origin_cyti_id;
+    public IntWritable getOrigin_city_id() {
+        return origin_city_id;
     }
 
-    public void setOrigin_cyti_id(IntWritable origin_cyti_id) {
-        this.origin_cyti_id = origin_cyti_id;
+    public void setOrigin_city_id(IntWritable origin_city_id) {
+        this.origin_city_id = origin_city_id;
     }
 
     public IntWritable getDest_airoprt_id() {
@@ -231,7 +231,14 @@ public class AiroportWritable implements Writable {
 
     @Override
     public void write(DataOutput out) throws IOException {
-
+        year.write(out);
+        quarter.write(out);
+        month.write(out);
+        day_of_month.write(out);
+        day_of_week.write(out);
+        fl_num.write(out);
+        origin_airoport_id.write(out);
+        orig_airpor_seq_id.write(out);
     }
 
     @Override
