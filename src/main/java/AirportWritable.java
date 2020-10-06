@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public class AirportWritable implements Writable {
     private IntWritable year;
+    private IntWritable quarter;
     private 
     @Override
     public void write(DataOutput out) throws IOException {
