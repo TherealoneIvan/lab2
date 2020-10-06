@@ -10,6 +10,7 @@ public class AirraceMapper extends Mapper<LongWritable, Text, LongWritable , Tex
     public static String fileTag = "AP~";
     public static String DATA_SEPARATOR = ",";
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        String[] values = value.toString().replaceAll("\"\"" , "" ).split(DATA_SEPARATOR);
         
     }
 }
