@@ -13,7 +13,7 @@ public class AirraceWritable implements Writable {
         code = new IntWritable(0);
         airoport_name = new Text("");
     }
-    public AirraceWritable()
+    public AirraceWritable(IntWritable )
 
     @Override
     public void write(DataOutput out) throws IOException {
