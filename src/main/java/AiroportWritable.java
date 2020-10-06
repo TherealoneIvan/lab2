@@ -5,7 +5,7 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class AiroportWritable implements Writable {
-
+    private 
     @Override
     public void write(DataOutput out) throws IOException {
 
