@@ -7,26 +7,26 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class AeroportWritable implements Writable {
+public class AirportWritable implements Writable {
     private IntWritable year , quarter , month , day_of_month , day_of_week , fl_num,
-            origin_airoport_id , orig_airpor_seq_id , origin_city_id, dest_airoprt_id,
+            origin_airport_id , orig_airpor_seq_id , origin_city_id, dest_airoprt_id,
             cancelled_code;
     private Text fl_date , uniq_carrier , airlane_id , carrier , tail_num , wheels_on ,
             airr_time;
     private DoubleWritable arr_delay , arr_delay_new , cancelled , air_time , distance;
 
-    public AeroportWritable(IntWritable year, IntWritable quarter, IntWritable month, IntWritable day_of_month, IntWritable day_of_week,
-                            IntWritable fl_num, IntWritable origin_airoport_id, IntWritable orig_airpor_seq_id, IntWritable origin_cyti_id,
-                            IntWritable dest_airoprt_id, IntWritable cancelled_code, Text fl_date, Text uniq_carrier, Text airlane_id, Text carrier,
-                            Text tail_num, Text wheels_on, Text airr_time, DoubleWritable arr_delay, DoubleWritable arr_delay_new, DoubleWritable cancelled,
-                            DoubleWritable air_time, DoubleWritable distance) {
+    public AirportWritable(IntWritable year, IntWritable quarter, IntWritable month, IntWritable day_of_month, IntWritable day_of_week,
+                           IntWritable fl_num, IntWritable origin_airoport_id, IntWritable orig_airpor_seq_id, IntWritable origin_cyti_id,
+                           IntWritable dest_airoprt_id, IntWritable cancelled_code, Text fl_date, Text uniq_carrier, Text airlane_id, Text carrier,
+                           Text tail_num, Text wheels_on, Text airr_time, DoubleWritable arr_delay, DoubleWritable arr_delay_new, DoubleWritable cancelled,
+                           DoubleWritable air_time, DoubleWritable distance) {
         this.year = year;
         this.quarter = quarter;
         this.month = month;
         this.day_of_month = day_of_month;
         this.day_of_week = day_of_week;
         this.fl_num = fl_num;
-        this.origin_airoport_id = origin_airoport_id;
+        this.origin_airport_id = origin_airoport_id;
         this.orig_airpor_seq_id = orig_airpor_seq_id;
         this.origin_city_id = origin_cyti_id;
         this.dest_airoprt_id = dest_airoprt_id;
@@ -94,11 +94,11 @@ public class AeroportWritable implements Writable {
     }
 
     public IntWritable getOrigin_airoport_id() {
-        return origin_airoport_id;
+        return origin_airport_id;
     }
 
     public void setOrigin_airoport_id(IntWritable origin_airoport_id) {
-        this.origin_airoport_id = origin_airoport_id;
+        this.origin_airport_id = origin_airoport_id;
     }
 
     public IntWritable getOrig_airpor_seq_id() {
@@ -237,7 +237,7 @@ public class AeroportWritable implements Writable {
         day_of_month.write(out);
         day_of_week.write(out);
         fl_num.write(out);
-        origin_airoport_id.write(out);
+        origin_airport_id.write(out);
         orig_airpor_seq_id.write(out);
     }
 
