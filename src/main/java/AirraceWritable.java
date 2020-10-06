@@ -9,7 +9,9 @@ import java.io.IOException;
 public class AirraceWritable implements Writable {
     private IntWritable code;
     private Text airoport_name;
-    
+    public AirraceWritable(){
+        
+    }
 
     @Override
     public void write(DataOutput out) throws IOException {
