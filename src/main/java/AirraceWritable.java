@@ -21,12 +21,13 @@ public class AirraceWritable implements Writable {
 
     @Override
     public void write(DataOutput out) throws IOException {
-        code.readFields(out);
-
+        code.write(out);
+        airoport_name.write(out);
     }
 
     @Override
     public void readFields(DataInput in) throws IOException {
-
+        code.readFields(in);
+        airoport_name.readFields(in);
     }
 }
