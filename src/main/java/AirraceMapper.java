@@ -1,2 +1,2 @@
-public class AirraceMapper {
+public class AirraceMapper extends {
 }
