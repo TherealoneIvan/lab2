@@ -9,6 +9,7 @@ public class AiroportWritable implements Writable {
     private IntWritable day_of_month;
     private IntWritable day_of_week;
     private Text fl_date;
-    private Text uniq_
+    private Text uniq_carrier_id;
+    
 
 }
