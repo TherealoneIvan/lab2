@@ -1,4 +1,5 @@
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 
 public class AiroportWritable implements Writable {
@@ -7,7 +8,7 @@ public class AiroportWritable implements Writable {
     private IntWritable month;
     private IntWritable day_of_month;
     private IntWritable day_of_week;
-    private IntWritable fl_date;
+    private Text fl_date;
     
 
 }
