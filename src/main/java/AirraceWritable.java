@@ -18,6 +18,21 @@ public class AirraceWritable implements Writable {
         this.airoport_name = airoport_name;
     }
 
+    public IntWritable getCode() {
+        return code;
+    }
+
+    public void setCode(IntWritable code) {
+        this.code = code;
+    }
+
+    public Text getAiroport_name() {
+        return airoport_name;
+    }
+
+    public void setAiroport_name(Text airoport_name) {
+        this.airoport_name = airoport_name;
+    }
 
     @Override
     public void write(DataOutput out) throws IOException {
