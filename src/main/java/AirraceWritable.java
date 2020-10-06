@@ -17,11 +17,12 @@ public class AirraceWritable implements Writable {
         this.code = code;
         this.airoport_name = airoport_name;
     }
-    
+
 
     @Override
     public void write(DataOutput out) throws IOException {
-
+        code.readFields(out);
+        
     }
 
     @Override
