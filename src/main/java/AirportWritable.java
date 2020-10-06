@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class AirportWritable implements Writable {
     private IntWritable year , quarter , month , day_of_month , day_of_week , fl_num,
-            origin_airport_id , orig_airpor_seq_id , origin_city_id, dest_airoprt_id,
+            origin_airport_id, orig_airport_seq_id, origin_city_id, dest_airport_id,
             cancelled_code;
     private Text fl_date , uniq_carrier , airlane_id , carrier , tail_num , wheels_on ,
             airr_time;
@@ -27,9 +27,9 @@ public class AirportWritable implements Writable {
         this.day_of_week = day_of_week;
         this.fl_num = fl_num;
         this.origin_airport_id = origin_airoport_id;
-        this.orig_airpor_seq_id = orig_airpor_seq_id;
+        this.orig_airport_seq_id = orig_airpor_seq_id;
         this.origin_city_id = origin_cyti_id;
-        this.dest_airoprt_id = dest_airoprt_id;
+        this.dest_airport_id = dest_airoprt_id;
         this.cancelled_code = cancelled_code;
         this.fl_date = fl_date;
         this.uniq_carrier = uniq_carrier;
@@ -93,20 +93,20 @@ public class AirportWritable implements Writable {
         this.fl_num = fl_num;
     }
 
-    public IntWritable getOrigin_airoport_id() {
+    public IntWritable getOrigin_airport_id() {
         return origin_airport_id;
     }
 
-    public void setOrigin_airoport_id(IntWritable origin_airoport_id) {
-        this.origin_airport_id = origin_airoport_id;
+    public void setOrigin_airport_id(IntWritable origin_airport_id) {
+        this.origin_airport_id = origin_airport_id;
     }
 
-    public IntWritable getOrig_airpor_seq_id() {
-        return orig_airpor_seq_id;
+    public IntWritable getOrig_airport_seq_id() {
+        return orig_airport_seq_id;
     }
 
-    public void setOrig_airpor_seq_id(IntWritable orig_airpor_seq_id) {
-        this.orig_airpor_seq_id = orig_airpor_seq_id;
+    public void setOrig_airport_seq_id(IntWritable orig_airport_seq_id) {
+        this.orig_airport_seq_id = orig_airport_seq_id;
     }
 
     public IntWritable getOrigin_city_id() {
@@ -117,12 +117,12 @@ public class AirportWritable implements Writable {
         this.origin_city_id = origin_city_id;
     }
 
-    public IntWritable getDest_airoprt_id() {
-        return dest_airoprt_id;
+    public IntWritable getDest_airport_id() {
+        return dest_airport_id;
     }
 
-    public void setDest_airoprt_id(IntWritable dest_airoprt_id) {
-        this.dest_airoprt_id = dest_airoprt_id;
+    public void setDest_airport_id(IntWritable dest_airport_id) {
+        this.dest_airport_id = dest_airport_id;
     }
 
     public IntWritable getCancelled_code() {
@@ -238,11 +238,48 @@ public class AirportWritable implements Writable {
         day_of_week.write(out);
         fl_num.write(out);
         origin_airport_id.write(out);
-        orig_airpor_seq_id.write(out);
+        orig_airport_seq_id.write(out);
+        origin_city_id.write(out);
+        dest_airport_id.write(out);
+        cancelled_code.write(out);
+        fl_date.write(out);
+        uniq_carrier.write(out);
+        airlane_id.write(out);
+        carrier.write(out);
+        tail_num.write(out);
+        wheels_on.write(out);
+        airr_time.write(out);
+        arr_delay.write(out);
+        arr_delay_new.write(out);
+        cancelled.write(out);
+        air_time.write(out);
+        distance.write(out);
     }
 
     @Override
     public void readFields(DataInput in) throws IOException {
-
+        year.readFields(in);
+        quarter.readFields(in);
+        month.readFields(in);
+        day_of_month.readFields(in);
+        day_of_week.readFields(in);
+        fl_num.readFields(in);
+        origin_airport_id.readFields(in);
+        orig_airport_seq_id.readFields(in);
+        origin_city_id.readFields(in);
+        dest_airport_id.readFields(in);
+        cancelled_code.readFields(in);
+        fl_date.readFields(in);
+        uniq_carrier.readFields(in);
+        airlane_id.readFields(in);
+        carrier.readFields(in);
+        tail_num.readFields(in);
+        wheels_on.readFields(in);
+        airr_time.readFields(in);
+        arr_delay.readFields(in);
+        arr_delay_new.readFields(in);
+        cancelled.readFields(in);
+        air_time.readFields(in);
+        distance.readFields(in);
     }
 }
