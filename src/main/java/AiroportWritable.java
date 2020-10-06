@@ -10,10 +10,10 @@ import java.io.IOException;
 public class AiroportWritable implements Writable {
     private IntWritable year , quarter , month , day_of_month , day_of_week , fl_num,
             origin_airoport_id , orig_airpor_seq_id , origin_cyti_id , dest_airoprt_id,
-            cann
+            cancelled_code;
     private Text fl_date , uniq_carrier , airlane_id , carrier , tail_num , wheels_on ,
             airr_time;
-    private DoubleWritable arr_delay , arr_delay_new , canceld ,
+    private DoubleWritable arr_delay , arr_delay_new , cancelld ,
 
     @Override
     public void write(DataOutput out) throws IOException {
