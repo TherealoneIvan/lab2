@@ -1,4 +1,5 @@
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 
 import java.io.DataInput;
@@ -7,7 +8,8 @@ import java.io.IOException;
 
 public class AirraceWritable implements Writable {
     private IntWritable code;
-    private 
+    private Text airoport_name;
+    
 
     @Override
     public void write(DataOutput out) throws IOException {
