@@ -6,7 +6,7 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class AiroportWritable implements Writable {
-    private IntWritable year , quarter , month , 
+    private IntWritable year , quarter , month , da
     @Override
     public void write(DataOutput out) throws IOException {
 
