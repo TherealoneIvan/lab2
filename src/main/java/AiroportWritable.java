@@ -7,6 +7,7 @@ public class AiroportWritable implements Writable {
     private IntWritable month;
     private IntWritable day_of_month;
     private IntWritable day_of_week;
-    private 
+    private IntWritable fl_date;
+    
 
 }
