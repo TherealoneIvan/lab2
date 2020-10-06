@@ -1,2 +1,2 @@
-public class Mapper {
+public class AirraceMapper {
 }
