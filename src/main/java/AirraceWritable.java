@@ -10,7 +10,7 @@ public class AirraceWritable implements Writable {
     private IntWritable code;
     private Text airoport_name;
     public AirraceWritable(){
-        code = new IntWritable()
+        code = new IntWritable(0)
     }
 
     @Override
