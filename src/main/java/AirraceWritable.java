@@ -22,7 +22,7 @@ public class AirraceWritable implements Writable {
     @Override
     public void write(DataOutput out) throws IOException {
         code.readFields(out);
-        
+
     }
 
     @Override
