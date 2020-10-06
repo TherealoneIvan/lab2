@@ -10,8 +10,10 @@ public class AirraceWritable implements Writable {
     private IntWritable code;
     private Text airoport_name;
     public AirraceWritable(){
-        code = new IntWritable(0)
+        code = new IntWritable(0);
+        airoport_name = new Text("");
     }
+    public 
 
     @Override
     public void write(DataOutput out) throws IOException {
