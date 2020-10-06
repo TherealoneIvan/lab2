@@ -1,2 +1,2 @@
-public class AirportMapper {
+public static class AirportMapper extends  {
 }
