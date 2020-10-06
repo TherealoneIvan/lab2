@@ -10,7 +10,8 @@ public class AiroportWritable implements Writable {
     private IntWritable year , quarter , month , day_of_month , day_of_week , fl_num,
             origin_airoport_id , orig_airpor_seq_id , origin_cyti_id , dest_airoprt_id,
             ;
-    private Text fl_date , uniq_carrier , airlane_id , carrier , tail_num , wheels_on
+    private Text fl_date , uniq_carrier , airlane_id , carrier , tail_num , wheels_on ,
+            airr_time , 
 
     @Override
     public void write(DataOutput out) throws IOException {
