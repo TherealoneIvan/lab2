@@ -9,7 +9,7 @@ import java.nio.file.Path;
 public class MainAiroportApp {
     public static void main(String args[]) throws Exception{
         if (args.length < 4){
-            System.err.println("MainAiroportApp exeptiom");
+            System.err.println("MainAiroportApp exception");
             System.exit(1);
         }
         Job job = Job.getInstance();
