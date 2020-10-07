@@ -5,7 +5,7 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class KeyWritableComparable implements WritableComparable {
-    private 
+    private int airportKey = 0
     @Override
     public int compareTo(Object o) {
         return 0;
