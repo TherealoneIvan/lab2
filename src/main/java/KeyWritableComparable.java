@@ -5,11 +5,22 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class KeyWritableComparable implements WritableComparable {
-    private static final int airportKey = 0;
-    private static final int airraceKey = 1;
+    private int airportKey = 0;
+    private int airraceKey = 1;
+
+    public  int getAirportKey() {
+        return airportKey;
+    }
+
+    public int getAirraceKey() {
+        return airraceKey;
+    }
+
     @Override
     public int compareTo(KeyWritableComparable o) {
-        int this =
+        int thisAiroportKey = this.airportKey;
+        int thisAirraceKey = this.airraceKey;
+        if (this.airportKey)
         return 0;
     }
 
