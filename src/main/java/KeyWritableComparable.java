@@ -21,8 +21,9 @@ public class KeyWritableComparable implements WritableComparable {
         int thisAiroportKey = this.airportKey;
         int thisAirraceKey = this.airraceKey;
         if (this.airportKey == o.airportKey){
-            return (this.airraceKey > o.airraceKey ? -1 
+            return (this.airraceKey > o.airraceKey ? -1 :
         }
+        return ()
         return 0;
     }
 
