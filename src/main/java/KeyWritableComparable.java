@@ -19,8 +19,7 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
     }
 //    @Override
     public int compareTo(KeyWritableComparable o) {
-        Vector ThisVectToComp;
-        Vector ThatVectToComp;
+        
     }
 
     @Override
