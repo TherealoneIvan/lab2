@@ -7,24 +7,24 @@ import java.util.Objects;
 
 public class KeyWritableComparable implements WritableComparable<KeyWritableComparable> {
     private int airportPartitionerKey;
-    private String airportID;
+    private int airportID;
 
     public  int getAirportPartitionerKey() {
         return airportPartitionerKey;
     }
 
-    public String getAirraceKey() {
+    public int getAirraceKey() {
         return airportID;
     }
 //    @Override
     public int compareTo(KeyWritableComparable o) {
-
+        
     }
 
     @Override
     public void write(DataOutput out) throws IOException {
         out.writeInt(airportPartitionerKey);
-        out.write(airportID);
+        out.writeInt(airportID);
     }
 
     @Override
@@ -39,11 +39,11 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
         if (o == null || getClass() != o.getClass()) return false;
         KeyWritableComparable that = (KeyWritableComparable) o;
         return airportPartitionerKey == that.airportPartitionerKey &&
-                airportID; == that.airportID;;
+                airportID == that.airportID;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(airportPartitionerKey, airportID;);
+        return Objects.hash(airportPartitionerKey, airportID);
     }
 }
