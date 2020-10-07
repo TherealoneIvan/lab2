@@ -31,6 +31,7 @@ public class KeyWritableComparable implements WritableComparable {
 
     @Override
     public void readFields(DataInput in) throws IOException {
-        airportKey.read
+        airportKey = in.readInt();
+        airraceKey = in.readInt();
     }
 }
