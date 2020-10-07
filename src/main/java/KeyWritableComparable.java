@@ -14,7 +14,7 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
     }
 
     public String getAirraceKey() {
-        return airportID;;
+        return airportID;
     }
 //    @Override
     public int compareTo(KeyWritableComparable o) {
@@ -24,13 +24,13 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
     @Override
     public void write(DataOutput out) throws IOException {
         out.writeInt(airportPartitionerKey);
-        out.writeInt(airportID;);
+        out.writeInt(airportID);
     }
 
     @Override
     public void readFields(DataInput in) throws IOException {
         airportPartitionerKey = in.readInt();
-        airportID; = in.readInt();
+        airportID = in.readInt();
     }
 
     @Override
