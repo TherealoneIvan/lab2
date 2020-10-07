@@ -8,7 +8,7 @@ public class KeyWritableComparable implements WritableComparable {
     private static final int airportKey = 0;
     private static final int airraceKey = 1;
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(KeyWritableComparable o) {
         int thisValue = 
         return 0;
     }
