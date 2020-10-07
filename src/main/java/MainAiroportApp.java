@@ -1,13 +1,14 @@
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.FileOutputFormat;
 import org.apache.hadoop.mapred.TextInputFormat;
+import org.apache.hadoop.mapred.lib.MultipleInputs;
 import org.apache.hadoop.mapreduce.Job;
 
 import java.nio.file.Path;
 
 public class MainAiroportApp {
-    public static void main(String arg[]) throws Exception{
-        if (arg.length < 4){
+    public static void main(String args[]) throws Exception{
+        if (args.length < 4){
             System.err.println("MainAiroportApp exeptiom");
             System.exit(1);
         }
