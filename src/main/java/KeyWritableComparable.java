@@ -23,7 +23,7 @@ public class KeyWritableComparable implements WritableComparable {
         if (this.airportKey == o.airportKey){
             return (this.airraceKey > o.airraceKey ? -1 :
         }
-        return (thisAiroportKey >= o.airportKey ? -1 : (this.airraceKey > o.airraceKey) ?)
+        return (thisAiroportKey >= o.airportKey ? -1 : (this.airraceKey > o.airraceKey ? : )
         return 0;
     }
 
