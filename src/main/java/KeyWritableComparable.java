@@ -16,8 +16,8 @@ public class KeyWritableComparable implements WritableComparable {
     public int getAirraceKey() {
         return airraceKey;
     }
-    @Override
-    public int compareTo(Object o) {
+//    @Override
+    public int compareTo(KeyWritableComparable o) {
         int thisAiroportKey = this.airportKey;
         int thisAirraceKey = this.airraceKey;
         return (thisAiroportKey >= o.airportKey ? -1 : (thisAirraceKey > o.airraceKey ? 0 : 1));
