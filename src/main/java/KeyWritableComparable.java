@@ -18,13 +18,13 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
     }
 //    @Override
     public int compareTo(KeyWritableComparable o) {
-        
+
     }
 
     @Override
     public void write(DataOutput out) throws IOException {
         out.writeInt(airportPartitionerKey);
-        out.writeInt(airportID);
+        out.write(airportID);
     }
 
     @Override
