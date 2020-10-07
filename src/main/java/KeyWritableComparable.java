@@ -16,7 +16,6 @@ public class KeyWritableComparable implements WritableComparable {
         return airraceKey;
     }
 
-    @Override
     public int compareTo(KeyWritableComparable o) {
         int thisAiroportKey = this.airportKey;
         int thisAirraceKey = this.airraceKey;
@@ -32,6 +31,6 @@ public class KeyWritableComparable implements WritableComparable {
 
     @Override
     public void readFields(DataInput in) throws IOException {
-
+        airportKey.read
     }
 }
