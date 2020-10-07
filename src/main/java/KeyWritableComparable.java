@@ -3,6 +3,7 @@ import org.apache.hadoop.io.WritableComparable;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
+import java.util.Objects;
 
 public class KeyWritableComparable implements WritableComparable {
     private int airportKey = 0;
@@ -15,7 +16,7 @@ public class KeyWritableComparable implements WritableComparable {
     public int getAirraceKey() {
         return airraceKey;
     }
-
+    @Override
     public int compareTo(KeyWritableComparable o) {
         int thisAiroportKey = this.airportKey;
         int thisAirraceKey = this.airraceKey;
@@ -33,5 +34,19 @@ public class KeyWritableComparable implements WritableComparable {
     public void readFields(DataInput in) throws IOException {
         airportKey = in.readInt();
         airraceKey = in.readInt();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        KeyWritableComparable that = (KeyWritableComparable) o;
+        return airportKey == that.airportKey &&
+                airraceKey == that.airraceKey;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(airportKey, airraceKey);
     }
 }
