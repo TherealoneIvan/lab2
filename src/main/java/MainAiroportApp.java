@@ -3,17 +3,16 @@ import org.apache.hadoop.mapred.FileOutputFormat;
 import org.apache.hadoop.mapred.TextInputFormat;
 import org.apache.hadoop.mapred.lib.MultipleInputs;
 import org.apache.hadoop.mapreduce.Job;
-
-import java.nio.file.Path;
+import org.apache.hadoop.fs.Path;
 
 public class MainAiroportApp {
-    public static void main(String args[]) throws Exception{
+    public static void main(String[] args) throws Exception{
         if (args.length < 4){
             System.err.println("MainAiroportApp exception");
             System.exit(1);
         }
         Job job = Job.getInstance();
-        job.setJarByClass(JoinJob.class);
+        job.setJarByClass(MainAiroportApp.class);
         job.setJobName("JoinJob sort");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirraceJoinMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, AirportJoinMapper.class);
