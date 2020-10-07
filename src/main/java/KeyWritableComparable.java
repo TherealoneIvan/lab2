@@ -14,7 +14,8 @@ public class KeyWritableComparable implements WritableComparable {
 
     @Override
     public void write(DataOutput out) throws IOException {
-        out.writeInt();
+        out.writeInt(airportKey);
+        out.writeInt(airraceKey);
     }
 
     @Override
