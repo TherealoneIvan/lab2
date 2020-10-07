@@ -5,7 +5,7 @@ import java.io.DataOutput;
 import java.io.IOException;
 import java.util.Objects;
 
-public class KeyWritableComparable implements WritableComparable {
+public class KeyWritableComparable implements WritableComparable<KeyWritableComparable> {
     private int airportKey = 0;
     private int airraceKey = 1;
 
@@ -17,7 +17,7 @@ public class KeyWritableComparable implements WritableComparable {
         return airraceKey;
     }
 //    @Override
-    public int compareTo(Object o) {
+    public int compareTo(KeyWritableComparable o) {
         int thisAiroportKey = this.airportKey;
         int thisAirraceKey = this.airraceKey;
         
