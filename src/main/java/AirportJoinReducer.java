@@ -1,5 +1,5 @@
 import org.apache.hadoop.mapreduce.Reducer;
 
-public class AirportJoinReducer extends Reducer<> {
+public class AirportJoinReducer extends Reducer<GroupingAirportComparatorClass , > {
 
 }
