@@ -13,7 +13,7 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
         String line = value.toString();
         String[] airraces = line.split(",");
         for (int i = 0 ; i < airraces.length - 1; i++) {
-            AirraceWritable someRace = new AirraceWritable(new IntWritable(airraces[i]) ,
+            AirraceWritable someRace = new AirraceWritable(new Text(airraces[i]) ,
                     new Text(airraces[i + 1]));
         }
     }
