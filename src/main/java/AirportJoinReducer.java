@@ -9,7 +9,9 @@ public class AirportJoinReducer extends Reducer<GroupingAirportComparatorClass ,
     protected void reduce(GroupingAirportComparatorClass key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
         Text airraceIndo = new Text(iter.next());
-        while ()
+        while (iter.hasNext()){
+            
+        }
     }
 
 }
