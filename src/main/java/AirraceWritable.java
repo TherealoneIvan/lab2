@@ -11,7 +11,7 @@ public class AirraceWritable implements Writable {
     public AirraceWritable(){
         airoport_name = new Text("");
     }
-    public AirraceWritable(Text code , Text airoport_name){
+    public AirraceWritable(Text airoport_name){
         this.airoport_name = airoport_name;
     }
 
