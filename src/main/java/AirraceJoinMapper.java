@@ -10,11 +10,10 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        String line = value.toString();
-        String[] airraces = line.split(",");
-        for (int i = 1 ; i < airraces.length ; i+=2) {
-             context.write(new KeyValueWritableComparable(airraces[i - 1] , "1") ,
-                     new Text(airraces[i]));
+        String lines = value.toString();
+        String[] airracesInfo = lines.split("\n");
+        for (String races : airracesInfo){
+            String[] oneRaceInfo = races.split(,);
         }
     }
 }
