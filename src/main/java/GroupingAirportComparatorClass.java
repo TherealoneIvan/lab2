@@ -6,6 +6,6 @@ public class GroupingAirportComparatorClass extends WritableComparator {
     public int compare(WritableComparable a, WritableComparable b) {
         KeyValueWritableComparable airportFirstPair = (KeyValueWritableComparable) a;
         KeyValueWritableComparable airportSecondPair = (KeyValueWritableComparable) b;
-        return 
+        return a.
     }
 }
