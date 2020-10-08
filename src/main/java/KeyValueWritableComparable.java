@@ -1,3 +1,4 @@
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.WritableComparable;
 
 import java.io.DataInput;
@@ -7,7 +8,7 @@ import java.util.Objects;
 
 public class KeyValueWritableComparable implements WritableComparable<KeyValueWritableComparable> {
     private int airportPartitionerKey;
-    private int airportID;
+    private Text airportID;
 
     public  int getAirportPartitionerKey() {
         return airportPartitionerKey;

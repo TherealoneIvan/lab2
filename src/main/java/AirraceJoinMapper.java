@@ -9,6 +9,6 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-            
+
     }
 }
