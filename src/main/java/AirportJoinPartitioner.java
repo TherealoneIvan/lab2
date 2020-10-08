@@ -1,2 +1,2 @@
-public class AirportJoinPartitioner {
+public class AirportJoinPartitioner extends Partitioner<Text, Text> { {
 }
