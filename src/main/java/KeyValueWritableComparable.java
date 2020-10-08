@@ -22,7 +22,10 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
         if (this.airportID.compareTo(o.airportID) == 1)
             return 1;
         if (this.airportID.compareTo(o.airportID) == 0){
-            return(this.airportPartitionerKey.compareTo() > o.airportPartitionerKey ? 1 : 0);
+            if (this.airportPartitionerKey.compareTo(o.airportPartitionerKey) == 1)
+                return 1;
+            else
+                return 0;
         }
         return 0;
     }
@@ -30,7 +33,7 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
     @Override
     public void write(DataOutput out) throws IOException {
         out.writeInt(airportPartitionerKey);
-        out.writeChars(airportID);
+        out.write(airportID);
     }
 
     @Override
