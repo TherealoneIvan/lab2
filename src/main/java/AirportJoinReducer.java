@@ -10,7 +10,7 @@ public class AirportJoinReducer extends Reducer<GroupingAirportComparatorClass ,
         Iterator<Text> iter = values.iterator();
         Text airraceInfo = new Text(iter.next());
         while (iter.hasNext()){
-            Text
+            
         }
     }
 
