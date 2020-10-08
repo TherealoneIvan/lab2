@@ -1,3 +1,3 @@
-public class AirportJoinReducer {
-    
+public class AirportJoinReducer extends  {
+
 }
