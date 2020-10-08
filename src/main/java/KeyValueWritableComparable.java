@@ -7,14 +7,14 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class KeyValueWritableComparable implements WritableComparable<KeyValueWritableComparable> {
-    private Text airportPartitionerKey;
-    private Text airportID;
+    private String airportPartitionerKey;
+    private String airportID;
 
-    public Text getAirportPartitionerKey() {
+    public String getAirportPartitionerKey() {
         return airportPartitionerKey;
     }
 
-    public Text getAirraceKey() {
+    public String getAirraceKey() {
         return airportID;
     }
 //    @Override
@@ -22,23 +22,20 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
         if (this.airportID.compareTo(o.airportID) == 1)
             return 1;
         if (this.airportID.compareTo(o.airportID) == 0){
-            if (this.airportPartitionerKey.compareTo(o.airportPartitionerKey) == 1)
-                return 1;
-            else
-                return 0;
+            return(this.airportPartitionerKey.compareTo(o.airportPartitionerKey));
         }
-        return 0;
+        return -1;
     }
 
     @Override
     public void write(DataOutput out) throws IOException {
-        out.writeInt(airportPartitionerKey);
-        out.write(airportID);
+        out.writeChars(airportPartitionerKey);
+        out.writeChars(airportID);
     }
 
     @Override
     public void readFields(DataInput in) throws IOException {
-        airportPartitionerKey = in.readInt();
+        airportPartitionerKey = in.readLine();
         airportID = in.readLine();
     }
 
@@ -47,7 +44,7 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         KeyValueWritableComparable that = (KeyValueWritableComparable) o;
-        return airportPartitionerKey == that.airportPartitionerKey &&
+        return Objects.equals(airportPartitionerKey, that.airportPartitionerKey) &&
                 Objects.equals(airportID, that.airportID);
     }
 
