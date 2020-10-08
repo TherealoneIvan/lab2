@@ -14,7 +14,12 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
         String[] airracesInfo = lines.split("\n");
         for (String races : airracesInfo){
             String[] oneRaceInfo = races.split(",");
-            if (oneRaceInfo[17] != "0" && oneRaceInfo[])
+            String isCanceld =  oneRaceInfo[19];
+            String is
+            if (oneRaceInfo[17] != "0" && oneRaceInfo[19] != "1"){
+                context.write(new KeyValueWritableComparable(oneRaceInfo[] , "1") ,
+                        new Text(airraces[i]));
+            }
         }
     }
 }
