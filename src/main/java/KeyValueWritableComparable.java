@@ -45,7 +45,7 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
         if (o == null || getClass() != o.getClass()) return false;
         KeyValueWritableComparable that = (KeyValueWritableComparable) o;
         return airportPartitionerKey == that.airportPartitionerKey &&
-                airportID == that.airportID;
+                Objects.equals(airportID, that.airportID);
     }
 
     @Override
