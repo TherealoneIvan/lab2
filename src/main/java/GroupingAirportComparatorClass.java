@@ -1,4 +1,4 @@
 
-public class GroupingAirportComparatorClass {
+public class GroupingAirportComparatorClass extends {
 
 }
