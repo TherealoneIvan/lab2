@@ -6,9 +6,9 @@ import javax.naming.Context;
 import java.io.IOException;
 
 public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritableComparable , Text> {
-    AirportWritable = new AirportWritable()
+
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-
+        AirportWritable = new AirportWritable();
     }
 }
