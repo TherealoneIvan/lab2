@@ -8,5 +8,5 @@ public class AirportJoinReducer extends Reducer<GroupingAirportComparatorClass ,
     protected void reduce(GroupingAirportComparatorClass key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
 
     }
-    
+
 }
