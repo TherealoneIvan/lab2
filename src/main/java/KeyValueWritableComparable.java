@@ -19,9 +19,9 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
     }
 //    @Override
     public int compareTo(KeyValueWritableComparable o) {
-        if (this.airportID > o.airportID)
+        if (this.airportID.compareTo(o.airportID) == 1)
             return 1;
-        if (this.airportID == o.airportID){
+        if (this.airportID.compareTo(o.airportID) == 1){
             return(this.airportPartitionerKey > o.airportPartitionerKey ? 1 : 0);
         }
         return 0;
