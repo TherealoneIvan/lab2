@@ -13,7 +13,7 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
     public String getAirportPartitionerKey() {
         return airportPartitionerKey;
     }
-
+    
     public String getAirraceKey() {
         return airportID;
     }
