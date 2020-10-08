@@ -18,7 +18,7 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
     public String getAirportPartitionerKey() {
         return airportPartitionerKey;
     }
-    public String getAirraceKey() {
+    public String getAirportID() {
         return airportID;
     }
 //    @Override
