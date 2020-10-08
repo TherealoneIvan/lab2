@@ -53,6 +53,14 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
     }
 
     @Override
+    public String toString() {
+        return "KeyValueWritableComparable{" +
+                "airportPartitionerKey='" + airportPartitionerKey + '\'' +
+                ", airportID='" + airportID + '\'' +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(airportPartitionerKey, airportID);
     }
