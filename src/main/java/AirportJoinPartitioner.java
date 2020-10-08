@@ -4,6 +4,6 @@ import org.apache.hadoop.mapreduce.Partitioner;
 public class AirportJoinPartitioner extends Partitioner<KeyValueWritableComparable, Text> {
     @Override
     public int getPartition(KeyValueWritableComparable keyValueWritableComparable, Text text, int numPartitions) {
-        return ()
+        return (keyValueWritableComparable.hashCode() & )
     }
 }
