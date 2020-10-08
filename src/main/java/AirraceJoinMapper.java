@@ -14,7 +14,7 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
         String[] airracesInfo = lines.split("\n");
         for (String races : airracesInfo){
             String[] oneRaceInfo = races.split(",");
-            if ()
+            if (oneRaceInfo[])
         }
     }
 }
