@@ -17,10 +17,10 @@ public class MainAiroportApp {
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirraceJoinMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, AirportJoinMapper.class);
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
-        job.setPartitionerClass(TextPair.FirstPartitioner.class);
-        job.setGroupingComparatorClass(TextPair.FirstComparator.class);
-        job.setReducerClass(JoinReducer.class);
-        job.setMapOutputKeyClass(TextPair.class);
+        job.setPartitionerClass(AirportJoinPartitioner.class);
+        job.setGroupingComparatorClass(GroupingAirportComparatorClass.class);
+        job.setReducerClass(AirportJoinReducer.class);
+        job.setMapOutputKeyClass(KeyValueWritableComparable.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
         job.setNumReduceTasks(2);
