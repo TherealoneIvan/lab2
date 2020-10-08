@@ -4,9 +4,8 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 import java.util.Objects;
-import java.util.Vector;
 
-public class KeyWritableComparable implements WritableComparable<KeyWritableComparable> {
+public class KeyValueWritableComparable implements WritableComparable<KeyValueWritableComparable> {
     private int airportPartitionerKey;
     private int airportID;
 
@@ -18,7 +17,7 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
         return airportID;
     }
 //    @Override
-    public int compareTo(KeyWritableComparable o) {
+    public int compareTo(KeyValueWritableComparable o) {
         if (this.airportID > o.airportID)
             return 1;
         if (this.airportID == o.airportID){
@@ -43,7 +42,7 @@ public class KeyWritableComparable implements WritableComparable<KeyWritableComp
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        KeyWritableComparable that = (KeyWritableComparable) o;
+        KeyValueWritableComparable that = (KeyValueWritableComparable) o;
         return airportPartitionerKey == that.airportPartitionerKey &&
                 airportID == that.airportID;
     }
