@@ -1,13 +1,9 @@
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Partitioner;
 
-public class AirportJoinPartitioner extends Partitioner<Text, Text> {
-    public AirportJoinPartitioner() {
-        super();
-    }
-
+public class AirportJoinPartitioner extends Partitioner<KeyValueWritableComparable, Text> {
     @Override
-    public int getPartition(Text text, Text text2, int numPartitions) {
+    public int getPartition(KeyValueWritableComparable keyValueWritableComparable, Text text, int numPartitions) {
         return 0;
     }
 }
