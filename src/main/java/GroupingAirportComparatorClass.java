@@ -4,6 +4,6 @@ import org.apache.hadoop.io.WritableComparator;
 public class GroupingAirportComparatorClass extends WritableComparator {
     @Override
     public int compare(WritableComparable a, WritableComparable b) {
-        return super.compare(a, b);
+        
     }
 }
