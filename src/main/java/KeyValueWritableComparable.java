@@ -7,14 +7,14 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class KeyValueWritableComparable implements WritableComparable<KeyValueWritableComparable> {
-    private int airportPartitionerKey;
-    private String airportID;
+    private Text airportPartitionerKey;
+    private Text airportID;
 
-    public  int getAirportPartitionerKey() {
+    public Text getAirportPartitionerKey() {
         return airportPartitionerKey;
     }
 
-    public String getAirraceKey() {
+    public Text getAirraceKey() {
         return airportID;
     }
 //    @Override
@@ -22,7 +22,7 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
         if (this.airportID.compareTo(o.airportID) == 1)
             return 1;
         if (this.airportID.compareTo(o.airportID) == 0){
-            return(this.airportPartitionerKey > o.airportPartitionerKey ? 1 : 0);
+            return(this.airportPartitionerKey.compareTo() > o.airportPartitionerKey ? 1 : 0);
         }
         return 0;
     }
