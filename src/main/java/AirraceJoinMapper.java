@@ -1,3 +1,4 @@
+import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -11,8 +12,9 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString();
         String[] airraces = line.split(",");
-        for (String items:airraces) {
-            AirraceWritable someRace = new AirraceWritable();
+        for (int i = 0 ; i < airraces.length - 1; i++) {
+            AirraceWritable someRace = new AirraceWritable(new IntWritable(airraces[i]) ,
+                    new Text(airraces[i + 1]));
         }
     }
 }
