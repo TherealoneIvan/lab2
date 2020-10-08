@@ -5,6 +5,7 @@ public class GroupingAirportComparatorClass extends WritableComparator {
     @Override
     public int compare(WritableComparable a, WritableComparable b) {
         KeyValueWritableComparable airportFirstPair = (KeyValueWritableComparable) a;
-        KeyValueWritableComparable airportFirstPair = (KeyValueWritableComparable) a;
+        KeyValueWritableComparable airportSecondPair = (KeyValueWritableComparable) b;
+        return 
     }
 }
