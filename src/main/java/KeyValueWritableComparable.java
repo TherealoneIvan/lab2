@@ -7,20 +7,20 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class KeyValueWritableComparable implements WritableComparable<KeyValueWritableComparable> {
-    private String airportPartitionerKey;
-    private String airportID;
+    private Text airportPartitionerKey;
+    private Text airportID;
     public KeyValueWritableComparable(){
-        
+
     }
-    public KeyValueWritableComparable(String airportPartitionerKey , String airportID) {
+    public KeyValueWritableComparable(Text airportPartitionerKey , Text airportID) {
         this.airportPartitionerKey = airportPartitionerKey;
         this.airportID = airportID;
     }
 
-    public String getAirportPartitionerKey() {
+    public Text getAirportPartitionerKey() {
         return airportPartitionerKey;
     }
-    public String getAirportID() {
+    public Text getAirportID() {
         return airportID;
     }
 //    @Override
