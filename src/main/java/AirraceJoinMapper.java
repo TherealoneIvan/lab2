@@ -18,6 +18,7 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
             String isDelay = oneRaceInfo[17];
             if (!isDelay.equals("0") && !isCanceld.equals("1") && !isDelay.equals("")
                     && !isCanceld.equals("")){
+                int airoportID = 
                 String airoportId = oneRaceInfo[14];
                 context.write(new KeyValueWritableComparable(airoportId
                                 , new Text("1")) , new Text(isDelay));
