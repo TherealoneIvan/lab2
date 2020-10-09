@@ -6,6 +6,6 @@ public class GroupingAirportComparatorClass extends WritableComparator {
     public int compare(WritableComparable a, WritableComparable b) {
         KeyValueWritableComparable airportFirstPair = (KeyValueWritableComparable) a;
         KeyValueWritableComparable airportSecondPair = (KeyValueWritableComparable) b;
-        return airportFirstPair.getAirportID().compareTo(airportSecondPair.getAirportID());
+        return airportFirstPair.compareTo(airportSecondPair);
     }
 }
