@@ -63,7 +63,7 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
                 '}';
     }
     public int compare(KeyValueWritableComparable a , KeyValueWritableComparable b){
-        
+        return a.compareTo(b);
     }
     @Override
     public int hashCode() {
