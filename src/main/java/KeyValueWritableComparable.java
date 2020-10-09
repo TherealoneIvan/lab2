@@ -26,6 +26,7 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
     }
     @Override
     public int compareTo(KeyValueWritableComparable o) {
+        if
         if (this.airportID.compareTo(o.airportID) == 1)
             return 1;
         if (this.airportID.compareTo(o.airportID) == 0){
