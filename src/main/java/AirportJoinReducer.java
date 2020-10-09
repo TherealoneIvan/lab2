@@ -11,7 +11,7 @@ public class AirportJoinReducer extends Reducer<GroupingAirportComparatorClass ,
         Text airraceInfo = new Text(iter.next());
         while (iter.hasNext()){
             Text airraceDelay = iter.next();
-            context.write(airraceInfo , airraceDelay);
+            context.write(airraceInfo.toString() , airraceDelay.toString());
         }
     }
 
