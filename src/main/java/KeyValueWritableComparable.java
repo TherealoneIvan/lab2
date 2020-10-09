@@ -9,14 +9,14 @@ import java.util.Objects;
 public class KeyValueWritableComparable implements WritableComparable<KeyValueWritableComparable> {
     private Text airportPartitionerKey;
     private Text airportID;
-    public KeyValueWritableComparable(){
-        airportPartitionerKey = new Text();
-        airportID = new Text();
-    }
-    public KeyValueWritableComparable(Text airportPartitionerKey , Text airportID) {
-        this.airportPartitionerKey = airportPartitionerKey;
-        this.airportID = airportID;
-    }
+//    public KeyValueWritableComparable(){
+//        airportPartitionerKey = new Text();
+//        airportID = new Text();
+//    }
+//    public KeyValueWritableComparable(Text airportPartitionerKey , Text airportID) {
+//        this.airportPartitionerKey = airportPartitionerKey;
+//        this.airportID = airportID;
+//    }
 
     public Text getAirportPartitionerKey() {
         return airportPartitionerKey;
@@ -26,7 +26,6 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
     }
     @Override
     public int compareTo(KeyValueWritableComparable o) {
-        if
         if (this.airportID.compareTo(o.airportID) == 1)
             return 1;
         if (this.airportID.compareTo(o.airportID) == 0){
