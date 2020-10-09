@@ -41,8 +41,8 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
 
     @Override
     public void readFields(DataInput in) throws IOException {
-        airportPartitionerKey = in.readLine();
-        airportID = in.readLine();
+        airportPartitionerKey.readFields(in);
+        airportID.readFields(in);
     }
 
     @Override
