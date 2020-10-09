@@ -26,12 +26,18 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
     }
     @Override
     public int compareTo(KeyValueWritableComparable o) {
-        if ()
+        if (this.airportPartitionerKey > o.airportPartitionerKey)
+            return 1;
+        if (this.airportPartitionerKey == o.airportPartitionerKey) {
+            if (this.airportID > o.airportID)
+                return 1;
+        }
+        return -1;
     }
 
     @Override
     public void write(DataOutput out) throws IOException {
-        airportPartitionerKey.write();
+        airportPartitionerKey;
         airportID.write(out);
     }
 
