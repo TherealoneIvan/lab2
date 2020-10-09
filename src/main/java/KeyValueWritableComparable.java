@@ -62,7 +62,7 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
                 ", airportID='" + airportID + '\'' +
                 '}';
     }
-
+    public int compare()
     @Override
     public int hashCode() {
         return Objects.hash(airportPartitionerKey, airportID);
