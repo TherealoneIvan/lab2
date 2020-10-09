@@ -14,7 +14,7 @@ public class MainAiroportApp {
             System.exit(1);
         }
 //        Job job = Job.getInstance();
-        JobConf job = new JobConf(new Configuration(), .class);
+        JobConf job = new JobConf(new Configuration(), MainAiroportApp.class);
         job.setJarByClass(MainAiroportApp.class);
         job.setJobName("JoinJob sort");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirraceJoinMapper.class);
