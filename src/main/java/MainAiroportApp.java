@@ -1,5 +1,7 @@
+import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.FileOutputFormat;
+import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.mapred.TextInputFormat;
 import org.apache.hadoop.mapred.lib.MultipleInputs;
 import org.apache.hadoop.mapreduce.Job;
@@ -11,7 +13,8 @@ public class MainAiroportApp {
             System.err.println("MainAiroportApp exception");
             System.exit(1);
         }
-        Job job = Job.getInstance();
+//        Job job = Job.getInstance();
+        JobConf job = new JobConf(new Configuration(), .class);
         job.setJarByClass(MainAiroportApp.class);
         job.setJobName("JoinJob sort");
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, AirraceJoinMapper.class);
