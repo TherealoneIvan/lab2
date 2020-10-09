@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class KeyValueWritableComparable implements WritableComparable<KeyValueWritableComparable> {
-    private Text airportPartitionerKey;
-    private Text airportID;
+    private int airportPartitionerKey;
+    private int airportID;
 //    public KeyValueWritableComparable(){
 //        airportPartitionerKey = new Text();
 //        airportID = new Text();
@@ -18,20 +18,15 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
 //        this.airportID = airportID;
 //    }
 
-    public Text getAirportPartitionerKey() {
+    public int getAirportPartitionerKey() {
         return airportPartitionerKey;
     }
-    public Text getAirportID() {
+    public int getAirportID() {
         return airportID;
     }
     @Override
     public int compareTo(KeyValueWritableComparable o) {
-        if (this.airportID.compareTo(o.airportID) == 1)
-            return 1;
-        if (this.airportID.compareTo(o.airportID) == 0){
-            return(this.airportPartitionerKey.compareTo(o.airportPartitionerKey));
-        }
-        return -1;
+        if ()
     }
 
     @Override
