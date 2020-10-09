@@ -13,10 +13,10 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
 //        airportPartitionerKey = new Text();
 //        airportID = new Text();
 //    }
-//    public KeyValueWritableComparable(Text airportPartitionerKey , Text airportID) {
-//        this.airportPartitionerKey = airportPartitionerKey;
-//        this.airportID = airportID;
-//    }
+    public KeyValueWritableComparable(int airportPartitionerKey , int airportID) {
+        this.airportPartitionerKey = airportPartitionerKey;
+        this.airportID = airportID;
+    }
 
     public int getAirportPartitionerKey() {
         return airportPartitionerKey;
