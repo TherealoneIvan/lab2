@@ -35,8 +35,8 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
 
     @Override
     public void write(DataOutput out) throws IOException {
-        .write(out);
-        out.write(out);
+        airportPartitionerKey.write(out);
+        airportID.write(out);
     }
 
     @Override
