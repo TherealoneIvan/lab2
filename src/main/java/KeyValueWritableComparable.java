@@ -31,11 +31,11 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
         if (this.airportPartitionerKey == o.airportPartitionerKey) {
             if (this.airportID > o.airportID)
                 return 1;
+            if (this.airportID == o.airportID)
+                return 0;
         }
         return -1;
     }
-    public int compare()
-
     @Override
     public void write(DataOutput out) throws IOException {
         out.writeInt(airportPartitionerKey);
