@@ -34,7 +34,7 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
             if (this.airportID == o.airportID)
                 return 0;
         }
-        return -1;
+        return 0;
     }
     @Override
     public void write(DataOutput out) throws IOException {
