@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 public class AirportJoinReducer extends Reducer<GroupingAirportComparatorClass , Text, Text ,Text> {
     @Override
-    protected void reduce(GroupingAirportComparatorClass key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+    protected void reduce(ч key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
         Text airraceInfo = new Text(iter.next());
         while (iter.hasNext()){
