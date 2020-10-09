@@ -9,7 +9,7 @@ import java.io.IOException;
 public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritableComparable , Text> {
 
     @Override
-    protected void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String lines = value.toString();
         String[] airracesInfo = lines.split("\n");
         for (String races : airracesInfo){
@@ -21,7 +21,7 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
                 int airoportID = Integer.parseInt(oneRaceInfo[14]);
                 int delayTime = Integer.parseInt(isDelay);
 //                String airoportId = oneRaceInfo[14];
-                context.write(new KeyValueWritableComparable(airoportID, 1) , delayTime);
+                context.write(new KeyValueWritableComparable(airoportID, 1) , new Text());
             }
         }
     }
