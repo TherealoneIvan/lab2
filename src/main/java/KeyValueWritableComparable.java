@@ -28,12 +28,13 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
     public int compareTo(KeyValueWritableComparable o) {
         if (this.airportPartitionerKey > o.airportPartitionerKey)
             return 1;
-        if (this.airportPartitionerKey == o.airportPartitionerKey) {
+        else if (this.airportPartitionerKey == o.airportPartitionerKey) {
             if (this.airportID > o.airportID)
                 return 1;
             if (this.airportID == o.airportID)
-                return 0;
-        }
+                return -1;
+        }else if (this.airportPartitionerKey < o.airportPartitionerKey)
+            return -1;
         return 0;
     }
     @Override
