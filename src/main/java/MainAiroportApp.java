@@ -7,7 +7,7 @@ import org.apache.hadoop.fs.Path;
 
 public class MainAiroportApp {
     public static void main(String[] args) throws Exception{
-        if (args.length < 5){
+        if (args.length < 3){
             System.err.println("MainAiroportApp exception");
             System.exit(1);
         }
