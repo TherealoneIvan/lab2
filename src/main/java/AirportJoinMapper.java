@@ -8,11 +8,12 @@ import java.io.IOException;
 public class AirportJoinMapper extends Mapper<LongWritable, Text, KeyValueWritableComparable , Text> {
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString().replace("\"" , "");
-        String[] airraces = line.split(",");
-        for (int i = 3 ; i < airraces.length ; i+=2) {
-            int airace = Integer.parseInt(airraces[i - 1]);
-            context.write(new KeyValueWritableComparable(airace ,
-                            1) , new Text(airraces[i]));
+        String[] airraces = line.split("\n");
+        for (int i = 1 ; i < airraces.length; i++) {
+            String [] parsecLine = airraces[i].split(",");
+            int airaceID = Integer.parseInt(parsecLine[0]);
+            context.write(new KeyValueWritableComparable(airaceID ,
+                            1) , new Text(airraces[1]));
         }
     }
 }
