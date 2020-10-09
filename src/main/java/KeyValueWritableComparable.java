@@ -10,8 +10,8 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
     private int airportPartitionerKey;
     private int airportID;
     public KeyValueWritableComparable(){
-        airportPartitionerKey = ;
-        airportID = ;
+        airportPartitionerKey = 0 ;
+        airportID = 0;
     }
     public KeyValueWritableComparable(int airportPartitionerKey , int airportID) {
         this.airportPartitionerKey = airportPartitionerKey;
