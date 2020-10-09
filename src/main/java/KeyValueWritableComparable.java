@@ -34,6 +34,7 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
         }
         return -1;
     }
+    
 
     @Override
     public void write(DataOutput out) throws IOException {
