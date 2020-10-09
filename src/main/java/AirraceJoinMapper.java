@@ -6,7 +6,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 import javax.naming.Context;
 import java.io.IOException;
 
-public class AirraceJoinMapper extends Mapper<Text, Text, KeyValueWritableComparable , Text> {
+public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritableComparable , Text> {
 
     @Override
     protected void map(Text key, Text value, Mapper.Context context) throws IOException, InterruptedException {
