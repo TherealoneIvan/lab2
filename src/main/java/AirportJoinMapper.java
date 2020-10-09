@@ -10,9 +10,9 @@ public class AirportJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
         String line = value.toString().replace("\"" , "");
         String [] airraces = line.split(",");
         for (int i = 1 ; i < airraces.length; i++) {
-            if (airraces[0].compareTo("Code") == 0) {
+            if (!airraces[0].equals("Code")) {
                 int airaceID = Integer.parseInt(airraces[0]);
-                context.write(new KeyValueWritableComparable(00 ,airaceID
+                context.write(new KeyValueWritableComparable(0 ,airaceID
                         ), new Text(airraces[1]));
             }
         }
