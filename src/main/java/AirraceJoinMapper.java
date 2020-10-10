@@ -10,12 +10,12 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        String line = value.toString();
+        String line = value.toString().replace("\"" , "");
         String[] oneRaceInfo = line.split(",");
         String isDelay = oneRaceInfo[17];
         if (key.get() > 0) {
-            int isCanceld = Integer.parseInt(oneRaceInfo[19]);
-            if (isCanceld != 1) {
+//            int isCanceld = Integer.parseInt(oneRaceInfo[19]);
+            if () {
                 int airoportID = Integer.parseInt(oneRaceInfo[14]);
                 double delayTime = Double.parseDouble(isDelay);
                 if (delayTime > 0)
