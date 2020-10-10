@@ -4,6 +4,7 @@ import org.apache.hadoop.io.WritableComparable;
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
+import java.security.Key;
 import java.util.Objects;
 
 public class KeyValueWritableComparable implements WritableComparable<KeyValueWritableComparable> {
@@ -63,6 +64,13 @@ public class KeyValueWritableComparable implements WritableComparable<KeyValueWr
                 "airportPartitionerKey='" + airportPartitionerKey + '\'' +
                 ", airportID='" + airportID + '\'' +
                 '}';
+    }
+    public int compareAirportID(KeyValueWritableComparable o){
+        if (this.airportID > o.airportID)
+            return 1;
+        else if (this.airportID != o.airportID)
+            return -1;
+        return 0;
     }
     public int compare(KeyValueWritableComparable a , KeyValueWritableComparable b){
         return a.compareTo(b);
