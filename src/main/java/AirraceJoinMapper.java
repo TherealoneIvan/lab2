@@ -14,13 +14,11 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
         String[] oneRaceInfo = line.split(",");
         String isDelay = oneRaceInfo[17];
         if (key.get() > 0) {
-                int isCanceld = Integer.parseInt(oneRaceInfo[19]);
-                if (isCanceld != 1) {
-                    int airoportID = Integer.parseInt(oneRaceInfo[14]);
-                    double delayTime = Double.parseDouble(isDelay);
-                    if (delayTime > 0)
-                        context.write(new KeyValueWritableComparable(1, airoportID), new Text(String.valueOf(delayTime)));
-                }
+                int airoportID = Integer.parseInt(oneRaceInfo[14]);
+                double delayTime = Double.parseDouble(isDelay);
+                if (delayTime > 0)
+                context.write(new KeyValueWritableComparable(1, airoportID), new Text(String.valueOf(delayTime)));
+
         }
     }
 }
