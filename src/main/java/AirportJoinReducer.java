@@ -12,12 +12,20 @@ public class AirportJoinReducer extends Reducer<KeyValueWritableComparable , Tex
         Text airraceDelay = iter.next();
         int cnt = 1;
         double delay = Double.parseDouble(String.valueOf(airraceDelay));
-        double maxDelay = 0;
-        double minDelay = 0;
+        double maxDelay = Double.parseDouble(String.valueOf(airraceDelay));
+        double minDelay = Double.parseDouble(String.valueOf(airraceDelay));
         while (iter.hasNext()) {
             airraceDelay = iter.next();
+            double tmpNewDelay = Double.parseDouble(String.valueOf(airraceDelay));
+            delay += tmpNewDelay;
+            if (maxDelay < tmpNewDelay)
+                maxDelay = tmpNewDelay;
+            if (minDelay > tmpNewDelay)
+                minDelay = tmpNewDelay;
+            cnt++;
             context.write(airport,
-                    new Text(airraceInfo.toString() + " " + airraceDelay.toString()));
+                    new Text("Min dealy : " + minDelay + " Max delay : " + maxDelay
+                            + " Delay : " + delay/cnt ) );
         }
     }
 }
