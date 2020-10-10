@@ -8,7 +8,7 @@ public class AirportJoinReducer extends Reducer<KeyValueWritableComparable , Tex
     @Override
     protected void reduce(KeyValueWritableComparable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
-//        Text airraceInfo = new Text(iter.next());
+        Text airraceInfo = new Text(iter.next());
         while (iter.hasNext()){
             Text airraceDelay = iter.next();
             context.write(new Text(String.valueOf(key.getAirportID())) , airraceDelay);
