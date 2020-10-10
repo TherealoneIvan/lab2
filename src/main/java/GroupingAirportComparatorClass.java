@@ -3,7 +3,7 @@ import org.apache.hadoop.io.WritableComparator;
 
 public class GroupingAirportComparatorClass extends WritableComparator {
     protected GroupingAirportComparatorClass() {
-        super();
+        super(KeyValueWritableComparable.class , true);
     }
 
     @Override
