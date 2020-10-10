@@ -7,14 +7,14 @@ import java.io.IOException;
 
 public class AirportJoinMapper extends Mapper<LongWritable, Text, KeyValueWritableComparable , Text> {
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        String line = value.toString().replace("\"" , "");
-        String [] airraces = line.split(",");
-        for (int i = 1 ; i < airraces.length; i++) {
-//            if (!airraces[0].equals("Code")) {
+        String line = value.toString().replace("\"", "");
+        String[] airraces = line.split(",");
+        if (key.get() > 0) {
+            for (int i = 1; i < airraces.length; i++) {
                 int airaceID = Integer.parseInt(airraces[0]);
-                context.write(new KeyValueWritableComparable(0 ,airaceID
-                        ), new Text(airraces[1]));
-//            }
+                context.write(new KeyValueWritableComparable(0, airaceID
+                ), new Text(airraces[1]));
+            }
         }
     }
 }
