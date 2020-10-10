@@ -9,7 +9,7 @@ import java.util.Objects;
 
 public class KeyValueWritableComparable implements WritableComparable<KeyValueWritableComparable> {
     private int airportPartitionerKey;
-    private int airportID = 0;
+    private int airportID;
     public KeyValueWritableComparable(){
         airportPartitionerKey = 0 ;
         airportID = 0;
