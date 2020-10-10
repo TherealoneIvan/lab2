@@ -16,11 +16,11 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
         String isDelay = oneRaceInfo[18];
         if (!isDelay.equals("0") && !isCanceld.equals("1") && !isDelay.equals("")
                 && !isCanceld.equals("")) {
-            if (!oneRaceInfo[14].equals("DEST_AIRPORT_ID")) {
+//            if (!oneRaceInfo[14].equals("DEST_AIRPORT_ID")) {
                 int airoportID = Integer.parseInt(oneRaceInfo[14]);
 //                int delayTime = .parseInt(isDelay);
                 context.write(new KeyValueWritableComparable( 1 , airoportID ), new Text(isDelay));
-            }
+//            }
         }
     }
 }
