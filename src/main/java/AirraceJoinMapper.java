@@ -13,7 +13,7 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
         String line = value.toString().replace("\"", "");
         String[] oneRaceInfo = line.split(",");
         String isCanceld = oneRaceInfo[19];
-        String isDelay = oneRaceInfo[18];
+        String isDelay = oneRaceInfo[17];
         if (key.get() > 0) {
                 int airoportID = Integer.parseInt(oneRaceInfo[14]);
                 double delayTime = Double.parseDouble(isDelay);
