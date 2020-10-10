@@ -9,10 +9,11 @@ public class AirportJoinReducer extends Reducer<KeyValueWritableComparable , Tex
     protected void reduce(KeyValueWritableComparable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
         Text airraceInfo = new Text(iter.next());
-        while (iter.hasNext()){
-            Text airraceDelay = iter.next();
-            context.write(airraceInfo , airraceDelay);
+        if (iter.hasNext()) {
+            while (iter.hasNext()) {
+                Text airraceDelay = iter.next();
+                context.write(airraceInfo, airraceDelay);
+            }
         }
     }
-
 }
