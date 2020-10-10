@@ -24,10 +24,10 @@ public class AirportJoinReducer extends Reducer<KeyValueWritableComparable , Tex
                 if (minDelay > tmpNewDelay)
                     minDelay = tmpNewDelay;
                 cnt++;
-                context.write(airport,
-                        new Text("Min dealy : " + minDelay + " Max delay : " + maxDelay
-                                + " Delay : " + delay / cnt));
             }
+            context.write(airport,
+                    new Text("Min dealy : " + minDelay + " Max delay : " + maxDelay
+                            + " Delay : " + delay / cnt));
         }
     }
 }
