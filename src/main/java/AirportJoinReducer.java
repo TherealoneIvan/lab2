@@ -11,7 +11,7 @@ public class AirportJoinReducer extends Reducer<KeyValueWritableComparable , Tex
         Text airport = new Text(iter.next());
         Text airraceDelay = iter.next();
         int cnt = 1;
-        double delay = Double.parseDouble(String.valueOf(airraceDelay))
+        double delay = Double.parseDouble(String.valueOf(airraceDelay));
         double maxDelay = 0;
         double minDelay = 0;
         while (iter.hasNext()) {
