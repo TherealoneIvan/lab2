@@ -12,7 +12,7 @@ public class AirportJoinReducer extends Reducer<KeyValueWritableComparable , Tex
         while (iter.hasNext()) {
             Text airraceDelay = iter.next();
             context.write(new Text(String.valueOf(key.getAirportID())),
-                    new Text(airraceDelay);
+                    new Text(airraceInfo.toString() + " " + airraceDelay.toString()));
         }
     }
 }
