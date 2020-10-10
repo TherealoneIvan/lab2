@@ -9,7 +9,7 @@ import java.io.IOException;
 public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritableComparable , Text> {
 
     @Override
-    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+    protected void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
         String line = value.toString();
         String[] oneRaceInfo = line.split(",");
 //        String isDelay = oneRaceInfo[17];
