@@ -8,10 +8,10 @@ import java.security.Key;
 import java.util.Objects;
 
 public class KeyValueWritableComparable implements WritableComparable<KeyValueWritableComparable> {
-    private int airportPartitionerKey = 0;
+    private int airportPartitionerKey;
     private int airportID = 0;
     public KeyValueWritableComparable(){
-        airportPartitionerKey = 0 ;
+//        airportPartitionerKey = 0 ;
         airportID = 0;
     }
     public KeyValueWritableComparable(int airportID , int airportPartitionerKey) {
