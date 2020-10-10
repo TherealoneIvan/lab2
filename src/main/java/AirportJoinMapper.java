@@ -12,7 +12,7 @@ public class AirportJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
         if (key.get() > 0) {
             for (int i = 1; i < airraces.length; i++) {
                 int airaceID = Integer.parseInt(airraces[0]);
-                context.write(new KeyValueWritableComparable( airaceID , 0),
+                context.write(new KeyValueWritableComparable(airaceID , 0),
                         new Text(airraces[1]));
             }
         }
