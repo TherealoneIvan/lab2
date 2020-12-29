@@ -11,7 +11,6 @@ public class MainAiroportApp {
             System.err.println("MainAiroportApp exception");
             System.exit(1);
         }
-        
         Job job = Job.getInstance();
         job.setJarByClass(MainAiroportApp.class);
         job.setJobName("JoinJob sort");
